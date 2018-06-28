@@ -229,7 +229,10 @@
                         <viewLayoutGuide key="safeArea" id="yij-cr-ABK"/>
                     </view>
                     <connections>
+                        <outlet property="coedBtn" destination="mtl-jr-5Cj" id="6iu-ga-ksh"/>
+                        <outlet property="mensBtn" destination="5Ji-uN-Xx2" id="O9a-9F-8XB"/>
                         <outlet property="nextBtn" destination="kSf-Ny-i8m" id="8qO-dm-rGh"/>
+                        <outlet property="womensBtn" destination="opV-Zq-0IY" id="pgc-fS-gp0"/>
                         <segue destination="58f-mU-tK0" kind="show" identifier="skillVCSegue" id="sWJ-k2-qeM"/>
                     </connections>
                 </viewController>
