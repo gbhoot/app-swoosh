@@ -8,7 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+@IBDesignable
+
+class WelcomeVC: UIViewController {
+    
+    // Outlets
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +24,11 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    // IB-Actions
+    
+    @IBAction func getStartedBtnPressed(_ sender: Any) {
+        performSegue(withIdentifier: ID_TO_LEAGUE_VC, sender: self)
+    }
+    
 }
 
