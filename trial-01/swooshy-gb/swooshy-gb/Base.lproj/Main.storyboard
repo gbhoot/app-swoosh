@@ -50,7 +50,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ge-wa-fu1" customClass="BorderButton" customModule="swooshy_gb" customModuleProvider="target">
-                                <rect key="frame" x="15" y="651" width="384" height="60"/>
+                                <rect key="frame" x="15" y="626" width="384" height="60"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Bej-cC-ed3"/>
@@ -77,7 +77,7 @@
                             <constraint firstItem="wZ2-sE-NIu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vx4-Cu-OWp"/>
                             <constraint firstItem="DJ5-UY-k7x" firstAttribute="width" secondItem="TrG-CF-wQS" secondAttribute="width" id="XxF-vP-W23"/>
                             <constraint firstItem="GF9-z3-fFm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="j2p-Rv-peg"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5Ge-wa-fu1" secondAttribute="bottom" constant="25" id="jcu-Tc-bir"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5Ge-wa-fu1" secondAttribute="bottom" constant="50" id="jcu-Tc-bir"/>
                             <constraint firstItem="TrG-CF-wQS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kMS-gk-MSJ"/>
                             <constraint firstItem="bp5-J1-Rb6" firstAttribute="top" secondItem="wZ2-sE-NIu" secondAttribute="bottom" constant="100" id="ngT-rX-xgq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5Ge-wa-fu1" secondAttribute="trailing" constant="15" id="rvg-Hf-caD"/>
@@ -155,11 +155,25 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DH7-vT-fmw" customClass="BorderButton" customModule="swooshy_gb" customModuleProvider="target">
-                                <rect key="frame" x="15" y="651" width="384" height="60"/>
+                                <rect key="frame" x="15" y="626" width="384" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="GVG-MJ-Ih9"/>
                                 </constraints>
                                 <state key="normal" title="NEXT"/>
+                                <connections>
+                                    <action selector="nextBtnPressed:" destination="PEr-Ft-iWI" eventType="touchUpInside" id="UuZ-KU-Sly"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8iF-dG-64f">
+                                <rect key="frame" x="16" y="20" width="29" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="RIJ-2J-Q56"/>
+                                    <constraint firstAttribute="width" constant="29" id="jFY-JV-dCs"/>
+                                </constraints>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <action selector="backBtnPressed:" destination="PEr-Ft-iWI" eventType="touchUpInside" id="C0u-hF-hjW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -170,12 +184,14 @@
                             <constraint firstItem="Sqc-D1-JS2" firstAttribute="trailing" secondItem="DH7-vT-fmw" secondAttribute="trailing" constant="15" id="W3r-F1-kSf"/>
                             <constraint firstItem="N6B-PU-tX0" firstAttribute="top" secondItem="eNe-S6-YZX" secondAttribute="top" id="WOV-bd-dUE"/>
                             <constraint firstItem="Sqc-D1-JS2" firstAttribute="bottom" secondItem="N6B-PU-tX0" secondAttribute="bottom" id="ab2-ZS-KHP"/>
-                            <constraint firstItem="Sqc-D1-JS2" firstAttribute="bottom" secondItem="DH7-vT-fmw" secondAttribute="bottom" constant="25" id="b6a-pO-fBY"/>
+                            <constraint firstItem="Sqc-D1-JS2" firstAttribute="bottom" secondItem="DH7-vT-fmw" secondAttribute="bottom" constant="50" id="b6a-pO-fBY"/>
                             <constraint firstItem="rQc-Lt-sSL" firstAttribute="top" secondItem="Sqc-D1-JS2" secondAttribute="top" constant="20" id="ebe-jE-gVU"/>
                             <constraint firstItem="apN-Re-WTC" firstAttribute="top" secondItem="cC0-tO-zsh" secondAttribute="bottom" constant="60" id="hPf-Ly-KHP"/>
+                            <constraint firstItem="8iF-dG-64f" firstAttribute="leading" secondItem="Sqc-D1-JS2" secondAttribute="leading" constant="16" id="hdu-U3-WV5"/>
                             <constraint firstItem="rQc-Lt-sSL" firstAttribute="centerX" secondItem="eNe-S6-YZX" secondAttribute="centerX" id="qwi-3m-6j5"/>
                             <constraint firstItem="cC0-tO-zsh" firstAttribute="centerX" secondItem="eNe-S6-YZX" secondAttribute="centerX" id="siQ-rj-2UN"/>
                             <constraint firstItem="Sqc-D1-JS2" firstAttribute="trailing" secondItem="N6B-PU-tX0" secondAttribute="trailing" id="uSD-Fl-TpZ"/>
+                            <constraint firstItem="8iF-dG-64f" firstAttribute="top" secondItem="Sqc-D1-JS2" secondAttribute="top" id="v9W-D7-eKq"/>
                             <constraint firstItem="Sqc-D1-JS2" firstAttribute="trailing" secondItem="apN-Re-WTC" secondAttribute="trailing" constant="15" id="wdd-d0-x7b"/>
                             <constraint firstItem="cC0-tO-zsh" firstAttribute="top" secondItem="rQc-Lt-sSL" secondAttribute="bottom" constant="50" id="yjy-Jj-Pgg"/>
                         </constraints>
@@ -186,14 +202,122 @@
                         <outlet property="mensBtn" destination="S0S-RQ-QW7" id="y5I-Vd-eVy"/>
                         <outlet property="nextBtn" destination="DH7-vT-fmw" id="bTJ-eL-iDu"/>
                         <outlet property="womensBtn" destination="HRE-o3-RmH" id="Adt-gQ-jFa"/>
+                        <segue destination="dea-Ca-YCs" kind="show" identifier="toSkillVC" id="Avo-KG-qhx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zvG-Sz-SdW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="774" y="33"/>
         </scene>
+        <!--SkillVC-->
+        <scene sceneID="MTh-k7-VQA">
+            <objects>
+                <viewController id="dea-Ca-YCs" customClass="SkillVC" customModule="swooshy_gb" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OE1-LI-ql1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beginnerBallerBG" translatesAutoresizingMaskIntoConstraints="NO" id="vYq-Ld-yqj">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kKT-J5-Ohr">
+                                <rect key="frame" x="16" y="20" width="29" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="29" id="5Ff-S2-eny"/>
+                                    <constraint firstAttribute="height" constant="24" id="LfV-CQ-kUI"/>
+                                </constraints>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <action selector="backBtnPressed:" destination="dea-Ca-YCs" eventType="touchUpInside" id="mMk-yO-dKV"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am a:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I2r-2C-A8A">
+                                <rect key="frame" x="169.66666666666666" y="110" width="75.333333333333343" height="34.333333333333343"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swooshLogo" translatesAutoresizingMaskIntoConstraints="NO" id="EQ0-CI-INy">
+                                <rect key="frame" x="147.66666666666666" y="40" width="118.99999999999997" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Ong-YH-Ft6"/>
+                                    <constraint firstAttribute="width" constant="119" id="frq-95-yKj"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="FMy-1z-4lc">
+                                <rect key="frame" x="30" y="264.33333333333331" width="354" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="plk-sG-QCQ" customClass="BorderButton" customModule="swooshy_gb" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="167" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="qkF-4A-ITG"/>
+                                        </constraints>
+                                        <state key="normal" title="Beginner"/>
+                                        <connections>
+                                            <action selector="beginnerBtnSelected:" destination="dea-Ca-YCs" eventType="touchUpInside" id="Fui-t8-x6E"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q6h-3h-IB6" customClass="BorderButton" customModule="swooshy_gb" customModuleProvider="target">
+                                        <rect key="frame" x="187" y="0.0" width="167" height="60"/>
+                                        <state key="normal" title="Baller"/>
+                                        <connections>
+                                            <action selector="ballerBtnSelected:" destination="dea-Ca-YCs" eventType="touchUpInside" id="5xp-Xo-cAD"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="q6h-3h-IB6" firstAttribute="height" secondItem="plk-sG-QCQ" secondAttribute="height" id="ZRN-ia-Jfw"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jnD-6l-LlQ" customClass="BorderButton" customModule="swooshy_gb" customModuleProvider="target">
+                                <rect key="frame" x="15" y="626" width="384" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="2xH-ub-kWd"/>
+                                </constraints>
+                                <state key="normal" title="FINISH"/>
+                                <connections>
+                                    <action selector="finishBtnPressed:" destination="dea-Ca-YCs" eventType="touchUpInside" id="s7b-Mg-b03"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="obM-is-mu4" firstAttribute="trailing" secondItem="FMy-1z-4lc" secondAttribute="trailing" constant="30" id="1GE-qt-npp"/>
+                            <constraint firstItem="obM-is-mu4" firstAttribute="trailing" secondItem="jnD-6l-LlQ" secondAttribute="trailing" constant="15" id="7MR-To-u6i"/>
+                            <constraint firstItem="EQ0-CI-INy" firstAttribute="top" secondItem="obM-is-mu4" secondAttribute="top" constant="20" id="91C-KM-8cA"/>
+                            <constraint firstItem="FMy-1z-4lc" firstAttribute="top" secondItem="I2r-2C-A8A" secondAttribute="bottom" constant="120" id="Ad9-cj-zHX"/>
+                            <constraint firstItem="kKT-J5-Ohr" firstAttribute="top" secondItem="obM-is-mu4" secondAttribute="top" id="DJv-XZ-cTd"/>
+                            <constraint firstItem="kKT-J5-Ohr" firstAttribute="leading" secondItem="obM-is-mu4" secondAttribute="leading" constant="16" id="LDI-2f-ZWx"/>
+                            <constraint firstItem="I2r-2C-A8A" firstAttribute="top" secondItem="EQ0-CI-INy" secondAttribute="bottom" constant="50" id="LFB-eb-Z2Z"/>
+                            <constraint firstItem="obM-is-mu4" firstAttribute="bottom" secondItem="vYq-Ld-yqj" secondAttribute="bottom" id="NBd-93-vAN"/>
+                            <constraint firstItem="FMy-1z-4lc" firstAttribute="leading" secondItem="obM-is-mu4" secondAttribute="leading" constant="30" id="RnA-nV-3yE"/>
+                            <constraint firstItem="jnD-6l-LlQ" firstAttribute="leading" secondItem="obM-is-mu4" secondAttribute="leading" constant="15" id="aTm-aO-8Vx"/>
+                            <constraint firstItem="FMy-1z-4lc" firstAttribute="centerX" secondItem="OE1-LI-ql1" secondAttribute="centerX" id="afd-gK-HFh"/>
+                            <constraint firstItem="vYq-Ld-yqj" firstAttribute="top" secondItem="OE1-LI-ql1" secondAttribute="top" id="jxm-cg-heg"/>
+                            <constraint firstItem="EQ0-CI-INy" firstAttribute="centerX" secondItem="OE1-LI-ql1" secondAttribute="centerX" id="l4E-qP-6NK"/>
+                            <constraint firstItem="I2r-2C-A8A" firstAttribute="centerX" secondItem="OE1-LI-ql1" secondAttribute="centerX" id="tz8-ds-qer"/>
+                            <constraint firstItem="obM-is-mu4" firstAttribute="trailing" secondItem="vYq-Ld-yqj" secondAttribute="trailing" id="win-yp-RGm"/>
+                            <constraint firstItem="obM-is-mu4" firstAttribute="bottom" secondItem="jnD-6l-LlQ" secondAttribute="bottom" constant="50" id="xSa-Gz-LAD"/>
+                            <constraint firstItem="vYq-Ld-yqj" firstAttribute="leading" secondItem="obM-is-mu4" secondAttribute="leading" id="z9Y-oe-eBP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="obM-is-mu4"/>
+                    </view>
+                    <connections>
+                        <outlet property="ballerBtn" destination="q6h-3h-IB6" id="TGs-qN-fqx"/>
+                        <outlet property="beginnerBtn" destination="plk-sG-QCQ" id="HeD-CU-FCW"/>
+                        <outlet property="finishBtn" destination="jnD-6l-LlQ" id="Vg5-gO-U4W"/>
+                        <segue destination="OqS-o5-ijh" kind="unwind" identifier="unwindToWelcomeVC" unwindAction="unwindToWelcomeVCWithSegue:" id="hRl-rZ-bTI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uW1-xc-3CF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="OqS-o5-ijh" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1539" y="33"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="backButton" width="29" height="24"/>
+        <image name="beginnerBallerBG" width="414" height="736"/>
         <image name="desiredLeagueBG" width="414" height="736"/>
         <image name="swooshLogo" width="119" height="20"/>
         <image name="welcomeScreenBG" width="414" height="736"/>

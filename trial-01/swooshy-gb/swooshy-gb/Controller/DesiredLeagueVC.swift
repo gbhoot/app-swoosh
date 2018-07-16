@@ -32,27 +32,35 @@ class DesiredLeagueVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == ID_TO_SKILL_VC {
+            if let skillVC = segue.destination as? SkillVC {
+                skillVC.player = player
+            }
+        }
+    }
+    
     func setupView() {
         nextBtn.isEnabled = false
     }
     
     func clearButtonStates() {
+        setupView()
         mensBtn.isSelected = false
         womensBtn.isSelected = false
         coedBtn.isSelected = false
     }
     
-    func buttonIsSelected(leagueType: String) {
-        nextBtn.isEnabled = true
-        clearButtonStates()
-    }
-    
     func selectLeague(leagueType: String, whichBtn: BorderButton) {
         if whichBtn.isSelected == false {
+            clearButtonStates()
             whichBtn.isSelected = true
+            nextBtn.isEnabled = true
         } else {
-            buttonIsSelected(leagueType: leagueType)
+            clearButtonStates()
         }
+        
+        player.desiredLeague = leagueType
     }
     
     // IB-Actions
@@ -66,5 +74,13 @@ class DesiredLeagueVC: UIViewController {
     
     @IBAction func coedBtnSelected(_ sender: Any) {
         selectLeague(leagueType: "coed", whichBtn: coedBtn)
+    }
+    
+    @IBAction func backBtnPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func nextBtnPressed(_ sender: Any) {
+        performSegue(withIdentifier: ID_TO_SKILL_VC, sender: self)
     }
 }

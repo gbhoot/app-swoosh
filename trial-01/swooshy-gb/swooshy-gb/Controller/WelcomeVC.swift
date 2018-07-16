@@ -30,5 +30,9 @@ class WelcomeVC: UIViewController {
         performSegue(withIdentifier: ID_TO_LEAGUE_VC, sender: self)
     }
     
+    @IBAction func unwindToWelcomeVC(segue: UIStoryboardSegue) {
+        
+    }
+    
 }
 
